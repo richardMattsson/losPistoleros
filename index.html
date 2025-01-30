@@ -87,9 +87,32 @@
           </tr>
         </table>
       </div>
-      <label for=""><input type="text" :value="sum" />Antal</label>
-      <label for=""><input type="text" :value="sum2" />Extra</label>
-      <label for=""><input type="text" :value="total" />Total</label>
+      <div id="divForDivNumberOfProducts">
+        <div id="divNumberOfProducts">
+          <label class="label"
+            ><input
+              class="numberOfProducts"
+              type="text"
+              :value="sum"
+            />Antal</label
+          >
+          <label class="label"
+            ><input
+              name="input"
+              class="numberOfProducts"
+              type="text"
+              :value="sum2"
+            />Extra</label
+          >
+          <label class="label"
+            ><input
+              class="numberOfProducts"
+              type="text"
+              :value="total"
+            />Total</label
+          >
+        </div>
+      </div>
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>

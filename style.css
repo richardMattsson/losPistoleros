@@ -79,6 +79,28 @@ tr:nth-child(even) .product {
   height: 30px;
   border: none;
 }
+#divForDivNumberOfProducts {
+  display: flex;
+  /* border: #333 1px solid; */
+  justify-content: end;
+}
+#divNumberOfProducts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin-top: 10px;
+
+  border: #7c7a7a 2px solid;
+}
+.numberOfProducts {
+  width: 50px;
+  margin-right: 10px;
+}
+.label {
+  /* border: #db0101e1 1px solid; */
+  margin-top: 5px;
+}
 @media screen and (min-width: 768px) {
   #app {
     margin-left: 40px;
