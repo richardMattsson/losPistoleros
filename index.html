@@ -61,24 +61,35 @@
             <th class="amountOf">Antal</th>
             <th class="amountOf">Extra</th>
           </tr>
-          <tr v-for="row in products">
+          <tr v-for="(row, index) in products" :key="index">
             <td class="amountOf">
-              <select class="inputAmount" name="" id="">
-                <option v-for="number in numbers" value="">{{number}}</option>
-                <!-- <option value="5">5</option>
-                <option value="5">10</option>
-                <option value="5">15</option>
-                <option value="5">20</option>
-                <option value="5">25</option> -->
+              <select
+                v-model="selectedCounters[index]"
+                class="inputAmount"
+                @change="onChange"
+              >
+                <option v-for="number in numbers" :key="number" :value="number">
+                  {{number}}
+                </option>
               </select>
-              <!-- <input class="inputAmount" type="" name="" id="" step="5" /> -->
             </td>
             <td class="amountOf">
-              <input class="inputAmount" type="number" name="" id="" step="5" />
+              <select
+                v-model="selectedCounters2[index]"
+                @change="onChange2"
+                class="inputAmount"
+              >
+                <option v-for="number in numbers" :key="number" :value="number">
+                  {{number}}
+                </option>
+              </select>
             </td>
           </tr>
         </table>
       </div>
+      <label for=""><input type="text" :value="sum" />Antal</label>
+      <label for=""><input type="text" :value="sum2" />Extra</label>
+      <label for=""><input type="text" :value="total" />Total</label>
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>

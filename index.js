@@ -1,4 +1,24 @@
 const app = Vue.createApp({
+  created() {
+    // Initialize selectedCounters with null or a default value
+    this.selectedCounters = new Array(this.products.length).fill(null);
+    this.selectedCounters2 = new Array(this.products.length).fill(null);
+  },
+  computed: {
+    total() {
+      return (this.totalSum = this.sum + this.sum2);
+    },
+  },
+  methods: {
+    onChange() {
+      this.sum = 0;
+      this.selectedCounters.forEach((value) => (this.sum += value));
+    },
+    onChange2() {
+      this.sum2 = 0;
+      this.selectedCounters2.forEach((value) => (this.sum2 += value));
+    },
+  },
   data() {
     return {
       products: [
@@ -18,7 +38,13 @@ const app = Vue.createApp({
         'Kiwi',
         'Kokos',
       ],
-      numbers: ['Välj', 5, 10, 15, 20, 25, 30],
+      numbers: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
+
+      selectedCounters: [],
+      selectedCounters2: [],
+      sum: 0,
+      sum2: 0,
+      totalSum: 0,
     };
   },
 });
