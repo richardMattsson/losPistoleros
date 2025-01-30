@@ -91,19 +91,24 @@ tr:nth-child(even) .product {
 #divNumberOfProducts {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
   width: 40%;
+  height: 95px;
   margin-top: 10px;
 
   border: #7c7a7a 2px solid;
 }
 .numberOfProducts {
   width: 50px;
-  margin-right: 10px;
+  margin-right: 30px;
+  margin-left: 10px;
 }
 .label {
   /* border: #db0101e1 1px solid; */
+  font-size: 1.2rem;
   margin-top: 5px;
+
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   #app {
