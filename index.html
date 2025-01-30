@@ -63,7 +63,15 @@
           </tr>
           <tr v-for="row in products">
             <td class="amountOf">
-              <input class="inputAmount" type="number" name="" id="" step="5" />
+              <select class="inputAmount" name="" id="">
+                <option v-for="number in numbers" value="">{{number}}</option>
+                <!-- <option value="5">5</option>
+                <option value="5">10</option>
+                <option value="5">15</option>
+                <option value="5">20</option>
+                <option value="5">25</option> -->
+              </select>
+              <!-- <input class="inputAmount" type="" name="" id="" step="5" /> -->
             </td>
             <td class="amountOf">
               <input class="inputAmount" type="number" name="" id="" step="5" />

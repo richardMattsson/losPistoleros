@@ -18,6 +18,7 @@ const app = Vue.createApp({
         'Kiwi',
         'Kokos',
       ],
+      numbers: ['Välj', 5, 10, 15, 20, 25, 30],
     };
   },
 });

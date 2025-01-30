@@ -12,11 +12,13 @@
 }
 aside {
   display: flex;
-  justify-content: center;
+  justify-content: end;
 }
 #customer {
-  margin: 20px;
-  width: 160px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  width: 200px;
   height: 30px;
   font-size: 1.3rem;
 }
