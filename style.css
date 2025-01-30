@@ -24,20 +24,21 @@ aside {
   /* margin-right: 25px; */
   color: #333;
   font-size: 0.8rem;
-  margin-left: 10px;
+  margin-left: 15px;
   width: 50px;
-  height: 40px;
+  height: 30px;
 }
-#dateLable {
-  font-size: 1rem;
+#dateLable,
+#signLable {
+  font-size: 0.8rem;
 }
 
 #date {
-  margin-left: 10px;
+  margin-left: 15px;
   color: #333;
   font-size: 0.8rem;
   width: 80px;
-  height: 40px;
+  height: 30px;
 }
 
 #tableDiv {
@@ -54,7 +55,7 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   height: 40px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   /* padding: 8px; */
 }
 
@@ -75,4 +76,15 @@ tr:nth-child(even) .product {
   width: 50px;
   height: 30px;
   border: none;
+}
+@media screen and (min-width: 768px) {
+  #app {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .pAdress {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    margin: 5px;
+  }
 }
