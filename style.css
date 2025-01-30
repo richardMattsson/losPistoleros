@@ -1,0 +1,78 @@
+* {
+  font-family: sans-serif;
+}
+#app {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.pAdress {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  margin: 3px;
+}
+aside {
+  display: flex;
+  justify-content: center;
+}
+#customer {
+  margin: 20px;
+  width: 150px;
+  height: 30px;
+  font-size: 1.3rem;
+}
+#sign {
+  /* margin-right: 25px; */
+  color: #333;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  width: 50px;
+  height: 40px;
+}
+#dateLable {
+  font-size: 1rem;
+}
+
+#date {
+  margin-left: 10px;
+  color: #333;
+  font-size: 0.8rem;
+  width: 80px;
+  height: 40px;
+}
+
+#tableDiv {
+  display: flex;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  height: 40px;
+  font-size: 0.7rem;
+  /* padding: 8px; */
+}
+
+tr:nth-child(even) .product {
+  background-color: #dddddd;
+}
+
+#tableAmount {
+  width: 40%;
+}
+.amountOf {
+  border: #333 1px solid;
+  /* height: 20px; */
+  /* width: 50px; */
+}
+
+.inputAmount {
+  width: 50px;
+  height: 30px;
+  border: none;
+}

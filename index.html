@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div id="app">
+      <router-view></router-view>
+
+      <header>
+        <figure style="display: flex; justify-content: center">
+          <img id="logo" src="los-pistoleros-logo_3_orig.jpg" alt="logo" />
+        </figure>
+      </header>
+
+      <nav style="display: flex; justify-content: space-between">
+        <div id="adress">
+          <p class="pAdress"><strong>Los Pistoleros</strong></p>
+          <p class="pAdress">Göteborgsvägen 89</p>
+          <p class="pAdress">Inlet Nordic AB</p>
+          <p class="pAdress">431 30 Mölndal</p>
+          <p class="pAdress">hola@los-pistoleros.se</p>
+        </div>
+        <div
+          id="dateAndSignature"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+          "
+        >
+          <label id="dateLable" for="date"
+            >Datum <input type="date" name="date" id="date"
+          /></label>
+          <label for="sign"
+            >Vår referens<input type="text" name="sign" id="sign"
+          /></label>
+        </div>
+      </nav>
+      <aside>
+        <label for="customer"
+          ><strong>Kund</strong
+          ><input type="text" name="customer" id="customer"
+        /></label>
+      </aside>
+      <div id="tableDiv">
+        <table id="tableProduct">
+          <tr>
+            <th class="product">Produkt</th>
+          </tr>
+          <tr class="product" v-for="product in products">
+            <td class="product">{{product}}</td>
+          </tr>
+        </table>
+
+        <table id="tableAmount">
+          <tr>
+            <th class="amountOf">Antal</th>
+            <th class="amountOf">Extra</th>
+          </tr>
+          <tr v-for="row in products">
+            <td class="amountOf">
+              <input class="inputAmount" type="number" name="" id="" step="5" />
+            </td>
+            <td class="amountOf">
+              <input class="inputAmount" type="number" name="" id="" step="5" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
