@@ -1,8 +1,16 @@
 self.addEventListener('install', (event) => {
-  console.log('Service Worker installed');
   event.waitUntil(
-    caches.open('pwa-cache').then((cache) => {
-      return cache.addAll(['/', '/index.html', '/icon.png']);
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll([
+        '/',
+        '/index.html',
+        '/style.css',
+        '/index.js',
+        '/los-pistoleros-logo.png',
+        '/mobile-screenshot.png',
+        '/screenshot.png',
+        // other assets...
+      ]);
     })
   );
 });
