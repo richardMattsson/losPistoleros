@@ -120,4 +120,58 @@ tr:nth-child(even) .product {
     font-size: 1.5rem;
     margin: 5px;
   }
+  #customer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 400px;
+    height: 30px;
+    font-size: 1.3rem;
+  }
+  #sign {
+    /* margin-right: 25px; */
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 85px;
+
+    width: 50px;
+    height: 30px;
+  }
+  #dateLable,
+  #signLable,
+  #customerLable {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  #date {
+    margin-left: 35px;
+    /* margin-right: 30px; */
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 150px;
+    height: 30px;
+  }
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+
+  body {
+    font-size: 12pt;
+    color: black;
+  }
+
+  footer,
+  nav,
+  .no-print {
+    display: none;
+  }
+  .content {
+    width: 100%;
+  }
 }

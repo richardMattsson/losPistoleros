@@ -6,6 +6,7 @@
     <title>Document</title>
   </head>
   <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
   <body>
     <div id="app">
       <router-view></router-view>
@@ -41,9 +42,8 @@
         </div>
       </nav>
       <aside>
-        <label for="customer"
-          ><strong>Kund</strong
-          ><input type="text" name="customer" id="customer"
+        <label id="customerLable" for="customer"
+          >Kund <input type="text" name="customer" id="customer"
         /></label>
       </aside>
       <div id="tableDiv">
@@ -119,5 +119,6 @@
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://unpkg.com/vue-router@4"></script>
     <script src="index.js"></script>
+    <script src="service-worker.js"></script>
   </body>
 </html>
