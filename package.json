@@ -1,0 +1,23 @@
+{
+  "name": "lospistoleros",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardMattsson/losPistoleros.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardMattsson/losPistoleros/issues"
+  },
+  "homepage": "https://github.com/richardMattsson/losPistoleros#readme",
+  "description": "",
+  "dependencies": {
+    "image-js": "^0.36.0",
+    "vue": "^3.5.13"
+  }
+}
