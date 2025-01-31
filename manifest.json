@@ -7,8 +7,8 @@
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "los-pistoleros-logo.png",
-      "sizes": "192x192",
+      "src": "los-pistoleros-logo2.png",
+      "sizes": "192x178",
       "type": "image/png"
     }
   ]
