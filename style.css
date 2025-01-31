@@ -85,7 +85,7 @@ tr:nth-child(even) .product {
 }
 #divForDivNumberOfProducts {
   display: flex;
-  border: #333 1px solid;
+  /* border: #333 1px solid; */
   justify-content: end;
 }
 #divNumberOfProducts {
@@ -96,7 +96,7 @@ tr:nth-child(even) .product {
   height: 10%;
   margin-top: 5px;
 
-  border: #7c7a7a 2px solid;
+  /* border: #7c7a7a 2px solid; */
 }
 .numberOfProducts {
   width: 50px;
@@ -104,7 +104,7 @@ tr:nth-child(even) .product {
   margin-left: 10px;
 }
 .label {
-  border: #db0101e1 1px solid;
+  /* border: #db0101e1 1px solid; */
   font-size: 1.2rem;
   margin-top: 5px;
 
