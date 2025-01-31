@@ -11,5 +11,13 @@
       "sizes": "192x192",
       "type": "image/png"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot.png",
+      "sizes": "1200x800",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
   ]
 }
