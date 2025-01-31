@@ -49,13 +49,26 @@
           >Kund <input type="text" name="customer" id="customer"
         /></label>
       </aside>
+      <div id="addProductDiv">
+        <label for="input-product"
+          ><button @click="addProduct">Lägg till produkt</button></label
+        ><input
+          v-model="newProductName"
+          placeholder="Produktnamn"
+          id="input-product"
+          type="text"
+        />
+      </div>
       <div id="tableDiv">
         <table id="tableProduct">
           <tr>
             <th class="product">Produkt</th>
           </tr>
-          <tr class="product" v-for="product in products">
-            <td class="product">{{product}}</td>
+          <tr class="product" v-for="product in products" :key="product.id">
+            <td class="product">
+              {{product.name}}
+              <button @click="removeProduct(product.id)">Ta bort</button>
+            </td>
           </tr>
         </table>
 
@@ -91,6 +104,30 @@
         </table>
       </div>
       <div id="divForDivNumberOfProducts">
+        <input
+          @click="showForm = true"
+          id="sendButton"
+          type="button"
+          value="Skicka"
+        />
+        <div v-if="showForm" class="modal-overlay">
+          <div class="modal-content">
+            <h2>Send email</h2>
+            <form id="sendForm">
+              <label for="name">Name:</label>
+              <input type="text" id="name" /><br />
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                id="email"
+                value="mattsson.richard@gmail.com"
+              />
+              <br />
+              <button id="formSend" type="submit">Send</button>
+              <button id="formCancel" @click="showForm = false">Close</button>
+            </form>
+          </div>
+        </div>
         <div id="divNumberOfProducts">
           <label class="label"
             ><input

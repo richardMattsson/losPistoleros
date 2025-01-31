@@ -16,7 +16,54 @@ const app = Vue.createApp({
       return (this.totalSum = this.sum + this.sum2);
     },
   },
+  data() {
+    return {
+      showForm: false,
+      products: [
+        { id: 1, name: 'Banan / Hasselnötskräm (Nutella)' },
+        { id: 2, name: 'Kokos / Hasselnötskräm (Nutella)' },
+        { id: 3, name: 'Mint / Mörk choklad' },
+        { id: 4, name: 'Passionsfrukt / Kond. mjölk' },
+        { id: 5, name: 'Vanilj karamell' },
+        { id: 6, name: 'Choklad / Kaka' },
+        { id: 7, name: 'Cookies & Cream (Oreo)' },
+        { id: 8, name: 'Citron / Lime' },
+        { id: 9, name: 'Hallon' },
+        { id: 10, name: 'Jordgubb (Ekologisk)' },
+        { id: 11, name: 'Mango (Ekologisk)' },
+        { id: 12, name: 'Tropical' },
+        { id: 13, name: 'Ananas (Ekologisk)' },
+        { id: 14, name: 'Kiwi' },
+        { id: 15, name: 'Kokos' },
+      ],
+      numbers: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
+      newProductName: '',
+      nextId: 16,
+      selectedCounters: [],
+      selectedCounters2: [],
+      sum: 0,
+      sum2: 0,
+      totalSum: 0,
+    };
+  },
   methods: {
+    addProduct() {
+      if (this.newProductName) {
+        this.products.push({
+          id: this.nextId++,
+          name: this.newProductName,
+        });
+        this.newProductName = '';
+      }
+    },
+    removeProduct(id) {
+      this.products = this.products.filter((product) => product.id !== id);
+    },
+    onSend() {
+      this.sendClicked = true;
+      console.log('hej');
+      alert(this.totalSum);
+    },
     onChange() {
       this.sum = 0;
       this.selectedCounters.forEach((value) => (this.sum += value));
@@ -25,34 +72,6 @@ const app = Vue.createApp({
       this.sum2 = 0;
       this.selectedCounters2.forEach((value) => (this.sum2 += value));
     },
-  },
-  data() {
-    return {
-      products: [
-        'Banan / Hasselnötskräm (Nutella)',
-        'Kokos / Hasselnötskräm (Nutella)',
-        'Mint / Mörk choklad',
-        'Passionsfrukt / Kond. mjölk',
-        'Vanilj karamell',
-        'Choklad / Kaka',
-        'Cookies & Cream (Oreo)',
-        'Citron / Lime',
-        'Hallon',
-        'Jordgubb (Ekologisk)',
-        'Mango (Ekologisk)',
-        'Tropical',
-        'Ananas (Ekologisk)',
-        'Kiwi',
-        'Kokos',
-      ],
-      numbers: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
-
-      selectedCounters: [],
-      selectedCounters2: [],
-      sum: 0,
-      sum2: 0,
-      totalSum: 0,
-    };
   },
 });
 
