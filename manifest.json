@@ -18,6 +18,11 @@
       "sizes": "1200x800",
       "type": "image/png",
       "form_factor": "wide"
+    },
+    {
+      "src": "mobile-screenshot.png",
+      "sizes": "360x640",
+      "type": "image/png"
     }
   ]
 }
