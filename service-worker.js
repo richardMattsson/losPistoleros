@@ -4,15 +4,31 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll([
-        '/',
-        '/index.html',
-        '/style.css',
-        '/index.js',
-        '/los-pistoleros-logo.png',
-        '/mobile-screenshot.png',
-        '/screenshot.png',
+        '/losPistoleros/',
+        '/losPistoleros/index.html',
+        '/losPistoleros/style.css',
+        '/losPistoleros/index.js',
+        '/losPistoleros/los-pistoleros-logo.png',
+        '/losPistoleros/mobile-screenshot.png',
+        '/losPistoleros/screenshot.png',
         // other assets...
       ]);
+    })
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  const cacheWhitelist = [CACHE_NAME];
+
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (!cacheWhitelist.includes(cacheName)) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
     })
   );
 });
