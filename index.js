@@ -1,3 +1,10 @@
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/service-worker.js')
+    .then((reg) => console.log('Service Worker registered', reg))
+    .catch((err) => console.log('Service Worker error', err));
+}
+
 const app = Vue.createApp({
   created() {
     // Initialize selectedCounters with null or a default value
@@ -49,39 +56,30 @@ const app = Vue.createApp({
   },
 });
 
-app.component('table-data', {
-  template: `
-        <tr>
-          <td class="amountOf">1</td>
-          <td class="amountOf">2</td>
-        </tr>
-    `,
-});
+// const Home = {
+//   template: `
 
-const Home = {
-  template: `
-    
-    `,
-};
-const Page = {
-  template: `
-    <h1>Page</h1>
-    `,
-};
+//     `,
+// };
+// const Page = {
+//   template: `
+//     <h1>Page</h1>
+//     `,
+// };
 
-const routes = [
-  {
-    component: Home,
-    path: '/',
-  },
-  { component: Page, path: '/page' },
-];
+// const routes = [
+//   {
+//     component: Home,
+//     path: '/',
+//   },
+//   { component: Page, path: '/page' },
+// ];
 
-const router = VueRouter.createRouter({
-  history: VueRouter.createWebHashHistory(),
-  routes,
-});
+// const router = VueRouter.createRouter({
+//   history: VueRouter.createWebHashHistory(),
+//   routes,
+// });
 
-app.use(router);
+// app.use(router);
 
 app.mount('#app');
