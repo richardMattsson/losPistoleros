@@ -188,8 +188,8 @@ tr:nth-child(even) .product {
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  top: 10px;
+  left: 10px;
   width: 150px;
   height: 180px;
   margin-top: 5px;
