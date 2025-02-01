@@ -49,12 +49,15 @@ aside {
 #input-product {
   width: 60%;
   margin-bottom: 5px;
+  margin-left: 25px;
   border: 1px solid #333;
   height: 20px;
 }
 
 #removeButton {
   width: 20px;
+  text-align: center;
+  margin-right: 5px;
   /* background-color: rgb(223, 98, 98); */
 }
 
@@ -209,6 +212,9 @@ tr:nth-child(even) .product {
   margin-top: 10px;
   margin-left: 5px;
   width: 100%;
+}
+#addProductDiv {
+  margin-top: 40px;
 }
 @media screen and (min-width: 768px) {
   #app {

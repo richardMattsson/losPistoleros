@@ -49,16 +49,7 @@
           >Kund <input type="text" name="customer" id="customer"
         /></label>
       </aside>
-      <div id="addProductDiv">
-        <label for="input-product"
-          ><button @click="addProduct">Lägg till produkt</button></label
-        ><input
-          v-model="newProductName"
-          placeholder="Produktnamn"
-          id="input-product"
-          type="text"
-        />
-      </div>
+
       <div id="tableDiv">
         <table id="tableProduct">
           <tr>
@@ -124,6 +115,7 @@
             </form>
           </div>
         </div>
+
         <div id="divNumberOfProducts">
           <label class="label"
             ><input
@@ -155,6 +147,17 @@
             value="Skicka"
           />
         </div>
+      </div>
+
+      <div id="addProductDiv">
+        <label for="input-product"
+          ><button @click="addProduct">Lägg till produkt</button></label
+        ><input
+          v-model="newProductName"
+          placeholder="Produktnamn"
+          id="input-product"
+          type="text"
+        />
       </div>
     </div>
 
