@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <link
+  <!-- <link
     rel="shortcut icon"
     href="los-pistoleros-logo2.png"
     type="image/x-icon"
-  />
+  /> -->
   <link rel="stylesheet" href="style.css" />
   <link rel="manifest" href="manifest.json" />
   <body>
@@ -104,12 +104,6 @@
         </table>
       </div>
       <div id="divForDivNumberOfProducts">
-        <input
-          @click="showForm = true"
-          id="sendButton"
-          type="button"
-          value="Skicka"
-        />
         <div v-if="showForm" class="modal-overlay">
           <div class="modal-content">
             <h2>Send email</h2>
@@ -118,17 +112,25 @@
               <input type="text" id="name" /><br />
               <label for="email">Email:</label>
               <input
-                type="text"
+                type="email"
                 id="email"
-                value="mattsson.richard@gmail.com"
+                v-model="userEmail"
+                placeholder="Enter your email"
               />
               <br />
-              <button id="formSend" type="submit">Send</button>
+              <button @click="generatePDF">Send</button>
               <button id="formCancel" @click="showForm = false">Close</button>
             </form>
           </div>
         </div>
         <div id="divNumberOfProducts">
+          <label class="label"
+            ><input
+              class="numberOfProducts"
+              type="text"
+              :value="total"
+            />Total</label
+          >
           <label class="label"
             ><input
               class="numberOfProducts"
@@ -145,19 +147,17 @@
               :value="sum2"
             />Extra</label
           >
-          <label class="label"
-            ><input
-              class="numberOfProducts"
-              type="text"
-              :value="total"
-            />Total</label
-          >
+          <input
+            @click="showForm = true"
+            id="sendButton"
+            type="button"
+            value="Skicka"
+          />
         </div>
       </div>
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>
-
     <script src="index.js"></script>
     <script src="service-worker.js"></script>
   </body>

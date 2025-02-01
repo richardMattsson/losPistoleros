@@ -44,6 +44,7 @@ const app = Vue.createApp({
       sum: 0,
       sum2: 0,
       totalSum: 0,
+      userEmail: '',
     };
   },
   methods: {
