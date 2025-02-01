@@ -46,6 +46,18 @@ aside {
   height: 30px;
 }
 
+#input-product {
+  width: 60%;
+  margin-bottom: 5px;
+  border: 1px solid #333;
+  height: 20px;
+}
+
+#removeButton {
+  width: 20px;
+  /* background-color: rgb(223, 98, 98); */
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -129,7 +141,6 @@ th {
   text-align: left;
   height: 40px;
   font-size: 0.8rem;
-  /* padding: 8px; */
 }
 .product {
   font-weight: 500;
@@ -143,9 +154,9 @@ tr:nth-child(even) .product {
   width: 40%;
 }
 .amountOf {
-  border: #333 1px solid;
-  /* height: 20px; */
-  /* width: 50px; */
+  font-size: 0.8rem;
+  text-align: center;
+  border: 1px solid #333;
 }
 
 .inputAmount {
